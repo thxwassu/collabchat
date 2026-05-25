@@ -4,8 +4,16 @@ import { $, escapeHTML, requireAuth, renderAvatar, setupShell, sidebarTemplate, 
 const app = $('#app');
 app.innerHTML = `${sidebarTemplate('profile')}<main class="main">${topbarTemplate('Profile Settings', 'Update your account, avatar, password, and activity status.')}<section class="content" id="content"></section></main>`;
 setupShell('profile');
-const auth = await requireAuth();
-if (auth) initProfile(auth);
+
+async function bootProfilePage() {
+  const auth = await requireAuth();
+
+  if (auth) {
+    initProfile(auth);
+  }
+}
+
+bootProfilePage();
 
 function initProfile({ user, profile }) {
   $('#content').innerHTML = `
