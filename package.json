@@ -1,0 +1,17 @@
+{
+  "name": "collabchat-supabase",
+  "version": "2.0.0",
+  "description": "CollabChat - Real-Time Chat and Team Collaboration Platform using Supabase online backend",
+  "type": "module",
+  "scripts": {
+    "start": "vite --host 0.0.0.0 --port 3000",
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 3000"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "vite": "^6.3.5"
+  },
+  "devDependencies": {}
+}
